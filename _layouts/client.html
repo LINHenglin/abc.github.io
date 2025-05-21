@@ -72,7 +72,7 @@ layout: default
                 {% for shipment in client_shipments %}
                 <tr>
                   <td>
-                    <a href="./shipments/{{ shipment.tracking_number }}.html" class="text-decoration-none">
+                    <a href="./?tracking={{ shipment.tracking_number }}" class="text-decoration-none">
                       {{ shipment.tracking_number }}
                     </a>
                   </td>

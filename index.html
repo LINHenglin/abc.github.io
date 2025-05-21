@@ -135,4 +135,21 @@ title: 运单列表
     alert('更新运单状态：' + trackingNumber);
     // 这里可以添加更新状态的具体实现
   }
+
+  // 检查URL中是否有运单号参数
+  const urlParams = new URLSearchParams(window.location.search);
+  const trackingNumber = urlParams.get('tracking');
+
+  if (trackingNumber) {
+    // 找到对应的运单卡片并高亮显示
+    const shipmentCards = document.querySelectorAll('.shipment-card');
+    shipmentCards.forEach(card => {
+      if (card.dataset.tracking === trackingNumber) {
+        card.style.display = 'block';
+        card.querySelector('.card').style.backgroundColor = '#e7f1ff';
+        card.querySelector('.card').style.border = '2px solid #0d6efd';
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
 </script>
