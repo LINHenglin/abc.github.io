@@ -1,15 +1,15 @@
-title: 外贸发货看板
-description: 外贸运单管理系统
+title: International Shipping Dashboard
+description: International Shipment Management System
 baseurl: ""
 url: ""
 
-# 构建设置
+# Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 排除文件
+# Exclude files
 exclude:
   - Gemfile
   - Gemfile.lock
