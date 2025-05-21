@@ -2,11 +2,6 @@
 layout: client
 title: 泰克马克斯电子科技
 code: techmax
-country: CN
-language: zh
-timezone: UTC+8
-contact: +86 13812345678
-email: info@techmax-electronics.com
 ---
 
 ## 公司简介
@@ -31,4 +26,12 @@ email: info@techmax-electronics.com
 - 首次合作时间：2023年12月
 - 平均月订单量：3-5单
 - 主要运输方式：海运
-- 主要目的地：香港、上海、迪拜 
+- 主要目的地：香港、上海、迪拜
+
+## 联系方式
+
+- **电话**：+86 13812345678
+- **邮箱**：info@techmax-electronics.com
+- **地址**：深圳市南山区科技园
+- **时区**：UTC+8
+- **语言**：中文 

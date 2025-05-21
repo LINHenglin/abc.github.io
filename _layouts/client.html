@@ -34,7 +34,7 @@ layout: default
           <h5 class="card-title mb-0">运单统计</h5>
         </div>
         <div class="card-body">
-          {% assign client_shipments = site.data.shipments | where: "client_code", page.client_code %}
+          {% assign client_shipments = site.data.shipments | where: "client_code", page.code %}
           <p><strong>总运单数：</strong>{{ client_shipments.size }}</p>
           <p><strong>待发货：</strong>{{ client_shipments | where: "status", "未发货" | size }}</p>
           <p><strong>运输中：</strong>{{ client_shipments | where: "status", "已发货" | size }}</p>
