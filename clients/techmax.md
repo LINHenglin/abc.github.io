@@ -1,7 +1,12 @@
 ---
 layout: client
 title: TechMax Electronics Technology
-code: techmax
+client_code: techmax
+country: CN
+language: zh
+timezone: UTC+8
+contact: +86 13812345678
+email: info@techmax-electronics.com
 ---
 
 ## Company Profile
