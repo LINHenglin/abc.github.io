@@ -1,11 +1,11 @@
 - tracking_number: NTS-2304_Elec_10_20250506123000
   client_code: NTS-2304
   cargo_short_name: Elec
-  cargo_details: 电子元件，型号ABC123
+  cargo_details: Electronic components, Model ABC123
   package_count: 10
   transport_mode: Sea
   estimated_days: 30
-  status: 已发货
+  status: Shipped
   created_at: 2025-05-06T12:30:00
   shipped_date: 2025-05-07
   arrival_date: 2025-06-06
@@ -14,11 +14,11 @@
 - tracking_number: NTS2304-010
   client_code: techmax
   cargo_short_name: SmartWatch
-  cargo_details: 智能手表，型号SW-2024
+  cargo_details: Smart Watch, Model SW-2024
   package_count: 500
   transport_mode: Sea
   estimated_days: 15
-  status: 已发货
+  status: Shipped
   created_at: 2024-03-15T17:25:00
   shipped_date: 2024-03-16
   arrival_date: 2024-03-31
@@ -27,11 +27,11 @@
 - tracking_number: NTS2304-005
   client_code: techmax
   cargo_short_name: IoT-Sensor
-  cargo_details: IoT传感器，型号IS-2024
+  cargo_details: IoT Sensor, Model IS-2024
   package_count: 1000
   transport_mode: Sea
   estimated_days: 20
-  status: 已发货
+  status: Shipped
   created_at: 2024-03-13T16:40:00
   shipped_date: 2024-03-14
   arrival_date: 2024-04-03
@@ -40,11 +40,11 @@
 - tracking_number: NTS2304-003
   client_code: techmax
   cargo_short_name: SmartHome
-  cargo_details: 智能家居套装，型号SH-2024
+  cargo_details: Smart Home Kit, Model SH-2024
   package_count: 200
   transport_mode: Sea
   estimated_days: 25
-  status: 已到达
+  status: Arrived
   created_at: 2024-03-10T08:45:00
   shipped_date: 2024-03-11
   arrival_date: 2024-04-05
@@ -53,11 +53,11 @@
 - tracking_number: NTS2304-015
   client_code: techmax
   cargo_short_name: SmartWatch-Pro
-  cargo_details: 智能手表专业版，型号SW-2024-Pro
+  cargo_details: Smart Watch Pro, Model SW-2024-Pro
   package_count: 300
   transport_mode: Sea
   estimated_days: 15
-  status: 未发货
+  status: Pending
   created_at: 2024-03-20T10:30:00
   shipped_date: 
   arrival_date: 2024-04-05
@@ -66,11 +66,11 @@
 - tracking_number: NTS2304-014
   client_code: NTS-2304
   cargo_short_name: PCB-Board
-  cargo_details: PCB电路板，型号PCB-2024
+  cargo_details: PCB Board, Model PCB-2024
   package_count: 500
   transport_mode: Sea
   estimated_days: 25
-  status: 未发货
+  status: Pending
   created_at: 2024-03-19T14:20:00
   shipped_date: 
   arrival_date: 2024-04-14
@@ -79,11 +79,11 @@
 - tracking_number: NTS2304-012
   client_code: techmax
   cargo_short_name: IoT-Gateway
-  cargo_details: IoT网关设备，型号IG-2024
+  cargo_details: IoT Gateway Device, Model IG-2024
   package_count: 150
   transport_mode: Sea
   estimated_days: 20
-  status: 已提货
+  status: Delivered
   created_at: 2024-03-05T09:15:00
   shipped_date: 2024-03-06
   arrival_date: 2024-03-26
@@ -93,11 +93,11 @@
 - tracking_number: NTS2304-008
   client_code: NTS-2304
   cargo_short_name: Elec-Comp
-  cargo_details: 电子元件套装，型号EC-2024
+  cargo_details: Electronic Component Kit, Model EC-2024
   package_count: 800
   transport_mode: Sea
   estimated_days: 30
-  status: 已提货
+  status: Delivered
   created_at: 2024-02-28T11:45:00
   shipped_date: 2024-02-29
   arrival_date: 2024-03-30

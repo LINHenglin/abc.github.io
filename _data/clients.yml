@@ -5,7 +5,7 @@
   country: SA
   contact: "+966 551234567"
 - code: techmax
-  name: 泰克马克斯电子科技
+  name: TechMax Electronics Technology
   english_name: TechMax Electronics
   country: CN
   language: zh
@@ -13,12 +13,12 @@
   contact: +86 13812345678
   email: info@techmax-electronics.com
   status: active
-  business_type: 电子产品制造商和贸易商
-  main_products: 智能穿戴设备、IoT设备
-  annual_export: 500万美元以上
-  main_markets: 欧洲、中东、北美
-  certifications: ISO9001、CE、FCC、RoHS
+  business_type: Electronics manufacturer and trader
+  main_products: Smart wearable devices, IoT devices
+  annual_export: Over $5 million
+  main_markets: Europe, Middle East, North America
+  certifications: ISO9001, CE, FCC, RoHS
   special_requirements: 
-    - 需要温控监测服务
-    - 优先选择直航航线
-    - 要求全程物流节点实时更新 
+    - Temperature monitoring service required
+    - Direct shipping routes preferred
+    - Real-time logistics node updates required 

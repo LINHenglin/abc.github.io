@@ -5,11 +5,11 @@ layout: default
   <div class="row mb-4">
     <div class="col-md-8">
       <h1><i class="bi bi-building"></i> {{ page.title }}</h1>
-      <p class="text-muted">客户代码：{{ page.client_code }}</p>
+      <p class="text-muted">Client Code: {{ page.client_code }}</p>
     </div>
     <div class="col-md-4 text-end">
       <button class="btn btn-outline-primary" onclick="window.location.href='../clients.html'">
-        <i class="bi bi-arrow-left"></i> 返回客户列表
+        <i class="bi bi-arrow-left"></i> Back to Client List
       </button>
     </div>
   </div>
@@ -18,27 +18,27 @@ layout: default
     <div class="col-md-4">
       <div class="card mb-4">
         <div class="card-header">
-          <h5 class="card-title mb-0">基本信息</h5>
+          <h5 class="card-title mb-0">Basic Information</h5>
         </div>
         <div class="card-body">
-          <p><strong>国家：</strong>{{ page.country }}</p>
-          <p><strong>语言：</strong>{{ page.language }}</p>
-          <p><strong>时区：</strong>{{ page.timezone }}</p>
-          <p><strong>联系方式：</strong>{{ page.contact }}</p>
-          <p><strong>电子邮箱：</strong>{{ page.email }}</p>
+          <p><strong>Country:</strong>{{ page.country }}</p>
+          <p><strong>Language:</strong>{{ page.language }}</p>
+          <p><strong>Timezone:</strong>{{ page.timezone }}</p>
+          <p><strong>Contact:</strong>{{ page.contact }}</p>
+          <p><strong>Email:</strong>{{ page.email }}</p>
         </div>
       </div>
 
       <div class="card mb-4">
         <div class="card-header">
-          <h5 class="card-title mb-0">运单统计</h5>
+          <h5 class="card-title mb-0">Shipment Statistics</h5>
         </div>
         <div class="card-body">
           {% assign client_shipments = site.data.shipments | where: "client_code", page.code %}
-          <p><strong>总运单数：</strong>{{ client_shipments.size }}</p>
-          <p><strong>待发货：</strong>{{ client_shipments | where: "status", "未发货" | size }}</p>
-          <p><strong>运输中：</strong>{{ client_shipments | where: "status", "已发货" | size }}</p>
-          <p><strong>已完成：</strong>{{ client_shipments | where: "status", "已提货" | size }}</p>
+          <p><strong>Total Shipments:</strong>{{ client_shipments.size }}</p>
+          <p><strong>Pending:</strong>{{ client_shipments | where: "status", "Pending" | size }}</p>
+          <p><strong>In Transit:</strong>{{ client_shipments | where: "status", "Shipped" | size }}</p>
+          <p><strong>Completed:</strong>{{ client_shipments | where: "status", "Delivered" | size }}</p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ layout: default
     <div class="col-md-8">
       <div class="card mb-4">
         <div class="card-header">
-          <h5 class="card-title mb-0">公司详情</h5>
+          <h5 class="card-title mb-0">Company Details</h5>
         </div>
         <div class="card-body">
           {{ content }}
@@ -55,17 +55,17 @@ layout: default
 
       <div class="card">
         <div class="card-header">
-          <h5 class="card-title mb-0">相关运单</h5>
+          <h5 class="card-title mb-0">Related Shipments</h5>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>运单号</th>
-                  <th>状态</th>
-                  <th>运输方式</th>
-                  <th>发货日期</th>
+                  <th>Tracking Number</th>
+                  <th>Status</th>
+                  <th>Transport Mode</th>
+                  <th>Shipped Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -79,10 +79,10 @@ layout: default
                   <td>
                     <span class="status-badge status-{{ shipment.status | downcase }}">
                       {% case shipment.status %}
-                      {% when '未发货' %} 🟡 等待发货
-                      {% when '已发货' %} 🚢 运输中
-                      {% when '已到达' %} ✅ 抵达目的港
-                      {% when '已提货' %} 📦 已提货
+                      {% when 'Pending' %} 🟡 Pending
+                      {% when 'Shipped' %} 🚢 In Transit
+                      {% when 'Arrived' %} ✅ Arrived at Destination
+                      {% when 'Delivered' %} 📦 Delivered
                       {% endcase %}
                     </span>
                   </td>
@@ -116,12 +116,12 @@ layout: default
 </style>
 
 <script>
-  // 检查URL中是否有运单号参数
+  // Check URL for tracking number parameter
   const urlParams = new URLSearchParams(window.location.search);
   const trackingNumber = urlParams.get('tracking');
 
   if (trackingNumber) {
-    // 找到对应的行并高亮显示
+    // Find and highlight the corresponding row
     const rows = document.querySelectorAll('tbody tr');
     rows.forEach(row => {
       const rowTracking = row.querySelector('td:first-child a').textContent.trim();
